@@ -60,7 +60,7 @@ class Maszyna:
         time.sleep(1)
         return 0
 
-    def Zmiana_poziomu(self, poziomtt):
+    def Zmiana_poziomu(poziomtt):
         tab=[0,50]
         if poziomtt == 1:
             tab=[3,4]
@@ -71,3 +71,12 @@ class Maszyna:
         else:
             print("Nie ma takiego poziomu!")
         return tab
+
+    def zmiana_ustawien(self, wybor3):
+        if(int(wybor3) == 1):
+            self.proby = int(input("Ile chcesz mieć prób? "))
+        elif(int(wybor3) == 2):
+            print("Wybierz poziom: ")
+            print("1. Łatwy (3-4 litery)\n2. Średni (5-6 liter)\n3. Trudny (7+ liter)")
+            wyborl = int(input())
+            return self.Zmiana_poziomu(wyborl)
